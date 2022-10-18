@@ -26,15 +26,16 @@
             <div class="d-flex">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link">0/81</a>
+                  <p  style="color: white;" id="verbs-counter"></p>
                 </li>
+                <button id="refresh" class="nav-item btn btn-outline-danger">Refresh</button>
               </ul>
             </div>
           </div>
         </div>
       </nav>
     </header>
-    <div class="text-center" id="next">
+    <div class="text-center" id="next2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="40"
@@ -49,18 +50,20 @@
         />
       </svg>
 
-      <h1 id="showverb">Play to start</h1>
+      <h1 id="showVerb">Play to start</h1>
       <div class="container text-center">
         <div id="verbs-container">
-          <div class="showImage"></div>
-          <div class="showAudio"></div>
+          <div id="showImage"></div>
+          <audio id="showAudio"></audio>
+          <br>
           <p class="verbs-answer" id="first-verb"></p>
-          <p class="verbs-answer" id="secont-verb"></p>
+          <p class="verbs-answer" id="second-verb"></p>
           <p class="verbs-answer" id="third-verb"></p>
           <p class="verbs-answer" id="fourth-verb"></p>
         </div>
         <small class="counter">
-          <span id="all-right-answers"></span>
+          <span id="all-right-answers"></span><br>
+          <span id="score"></spanid>
         </small>
       </div>
     </div>

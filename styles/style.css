@@ -7,6 +7,12 @@
   margin: 0 35%;
 }
 
+#next {
+  margin-top: 10rem;
+  cursor: pointer;
+  color: green;
+}
+
 .verbs-answer {
   display: block;
 }
@@ -23,10 +29,4 @@
   background-color: #b33030;
   border-color: #b33030;
   color: #ffff;
-}
-
-#next {
-  margin-top: 8rem;
-  cursor: pointer;
-  color: green;
 }
