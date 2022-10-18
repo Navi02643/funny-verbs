@@ -79,18 +79,18 @@ fourth.addEventListener("click", function () {
   buttonEffect(isItRigth_(fourth.innerHTML), this);
 });
 
-function shuffleAnswers(verbs) {
-  let numberOfAnswerButtons = verbs.length;
+function shuffleAnswers(verbos) {
+  let numberOfAnswerButtons = verbos.length;
   let randomIndex;
   while (numberOfAnswerButtons != 0) {
     randomIndex = Math.floor(Math.random() * numberOfAnswerButtons);
     numberOfAnswerButtons--;
-    [verbs[numberOfAnswerButtons], verbs[randomIndex]] = [
-      verbs[randomIndex],
-      verbs[numberOfAnswerButtons],
+    [verbos[numberOfAnswerButtons], verbos[randomIndex]] = [
+      verbos[randomIndex],
+      verbos[numberOfAnswerButtons],
     ];
   }
-  return verbs;
+  return verbos;
 }
 
 function isItRigth_(answer) {
@@ -105,8 +105,10 @@ function randomVerbo(notThisOne) {
 function ponerVerbo() {
   answerRoulette = shuffleAnswers(answerRoulette);
   let randomPosition = everyNumberOfVerbs[lastPosition];
-  let imgText = "<img src='./assets/img/" + verbs[randomPosition] + ".jpg'";
-  imgText += "height='140px' width='100px'/>";
+  let imgText =
+    "<img src='./assets/img/" +
+    verbs[randomPosition] +
+    ".jpg' height='140px' width='100px'/>";
   first.classList.add("btn", "btn-outline-primary", "btn-md");
   second.classList.add("btn", "btn-outline-primary", "btn-md");
   third.classList.add("btn", "btn-outline-primary", "btn-md");
@@ -115,8 +117,7 @@ function ponerVerbo() {
     var just_position = lastPosition + 1;
     verbCounter.innerHTML = "" + just_position + "/" + numberOfVerbs;
     allRightCounter.innerHTML = "Right answers: " + rightAnswersCounter;
-    score.innerHTML =
-      "Right answers without making mistakes: " + scoreStreak;
+    score.innerHTML = "Right answers without making mistakes: " + scoreStreak;
     showVerb.innerHTML = verbs[randomPosition];
     showImage.innerHTML = imgText;
     showAudio.src = "./assets/audio/" + verbs[randomPosition] + ".mp3";
@@ -139,8 +140,7 @@ function ponerVerbo() {
   } else {
     verbCounter.innerHTML = "0 / " + numberOfVerbs;
     allRightCounter.innerHTML = "Right answers: " + rightAnswersCounter;
-    score.innerHTML =
-      "Right answers without making mistakes: " + scoreStreak;
+    score.innerHTML = "Right answers without making mistakes: " + scoreStreak;
     showVerb.innerHTML = "Thank you!";
     verbsContainer.innerHTML = "";
   }
